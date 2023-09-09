@@ -1,0 +1,101 @@
+
+
+ 
+
+import java.util.Scanner;
+
+ 
+
+public class Student {
+
+    
+
+    int studID;
+
+    String studName;
+
+    String subject;
+
+    double seatwork;
+
+    double quizzes;
+
+    double lab;
+
+    double project;
+
+    double majorExam;
+
+    
+
+    
+
+    Student(int LocstudID, String LocstudName, String Locsubject){
+
+    this.studID = studID;
+
+    this.studName = studName;
+
+    this.subject = subject;
+
+ 
+
+  }
+
+    public void inputGrades() {
+
+        Scanner sc=new Scanner(System.in);
+
+        
+
+        System.out.println("Enter grades for " + studName + " in " + subject);
+
+        System.out.println("Seatwork: ");
+
+        seatwork = sc.nextDouble();
+
+        System.out.println("Quizzes: ");
+
+        quizzes = sc.nextDouble();
+
+        System.out.println("Lab: ");
+
+        lab = sc.nextDouble();
+
+        System.out.println("Project: ");
+
+        project = sc.nextDouble();
+
+        System.out.println("Major Exam: ");
+
+        majorExam = sc.nextDouble();
+
+        
+
+  }
+
+    public void computeTermGrade() {
+
+        double classStanding = (seatwork + quizzes + lab + project) / 4.0;
+
+        double termGrade = (classStanding * 0.6) + (majorExam * .4);
+
+ 
+
+    }
+
+    
+
+    public void displayTermGrade() {
+
+        
+
+        System.out.println("Term Grade for " + studName + "in " + ": " + majorExam);
+
+    
+
+    }
+
+    
+
+}
