@@ -16,7 +16,7 @@ public class Student {
 	}
 	
 	public double TermGrade () {
-		double Average = (Seatwork *.15 + Quizzes * .15 + Lab * .15 + Project *.15 + MajorExam *.15);
+		double Average = (Seatwork *.15 + Quizzes * .15 + Lab * .15 + Project *.15 + MajorExam *.4);
 		return Average;
 	}
 	
