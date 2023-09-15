@@ -3,9 +3,9 @@ public class Main {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		boolean tocontinue = true;
 		
-		while(tocontinue) {
+		
+		while(true) {
 			System.out.print("Enter Student ID: ");
 			int StudID = sc.nextInt();
 			
@@ -43,16 +43,17 @@ public class Main {
 			System.out.println("Quizzes: " + Quizzes);
 			System.out.println("Lab: " + Lab);
 			System.out.println("Project: " + Project);
+			System.out.println("Major Exam: " + MajorExam);
 			System.out.println("Term Grade: " + average);
 			
 			
 			System.out.println("Do you want to input another Student (Y/N)");
 			String input = sc.next();
-			tocontinue = input.equalsIgnoreCase("Y");
-			sc.nextLine();
-			break;
+			if (!input.equalsIgnoreCase("Y")) {
+				break;
+			}
 		}
-
+		sc.close();
 	}
 
 }
